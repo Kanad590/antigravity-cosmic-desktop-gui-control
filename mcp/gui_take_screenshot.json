@@ -1,0 +1,1 @@
+{"name":"gui_take_screenshot","description":"\n    Take an instant, full-desktop screenshot on Pop!_OS COSMIC Wayland using cosmic-screenshot.\n    Saves to save_path and returns confirmation.\n    ","parameters":{"properties":{"save_path":{"default":"/tmp/ag_screen.png","title":"Save Path","type":"string"}},"title":"gui_take_screenshotArguments","type":"object"}}

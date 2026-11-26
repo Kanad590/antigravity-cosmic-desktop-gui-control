@@ -1,0 +1,1 @@
+{"name":"gui_get_mouse_position","description":"\n    Get the current (x, y) coordinates of the mouse cursor.\n    ","parameters":{"properties":{},"title":"gui_get_mouse_positionArguments","type":"object"}}

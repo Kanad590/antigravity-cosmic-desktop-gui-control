@@ -1,0 +1,1 @@
+{"name":"gui_get_screen_size","description":"\n    Get the screen resolution as 'width, height' (e.g. '1366, 768').\n    ","parameters":{"properties":{},"title":"gui_get_screen_sizeArguments","type":"object"}}

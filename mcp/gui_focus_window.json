@@ -1,0 +1,1 @@
+{"name":"gui_focus_window","description":"\n    Bring an open application window to the front (and optionally maximize it).\n    ","parameters":{"properties":{"maximize":{"default":false,"title":"Maximize","type":"boolean"},"title":{"title":"Title","type":"string"}},"required":["title"],"title":"gui_focus_windowArguments","type":"object"}}

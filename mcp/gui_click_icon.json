@@ -1,0 +1,30 @@
+{
+  "name": "gui_click_icon",
+  "description": "Locate a textless toolbar/app icon using OpenCV multi-scale template matching and click its center.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "template_path": {
+        "type": "string",
+        "description": "Absolute path to the cropped PNG icon template."
+      },
+      "window_title": {
+        "type": "string",
+        "description": "Optional target window title to focus and crop search to."
+      },
+      "threshold": {
+        "type": "number",
+        "description": "Match confidence threshold (0.0 to 1.0). Default: 0.82."
+      },
+      "button": {
+        "type": "string",
+        "description": "Mouse button ('left', 'right', 'middle'). Default: 'left'."
+      },
+      "double": {
+        "type": "boolean",
+        "description": "Whether to double-click. Default: false."
+      }
+    },
+    "required": ["template_path"]
+  }
+}

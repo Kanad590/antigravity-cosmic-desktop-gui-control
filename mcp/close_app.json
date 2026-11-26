@@ -1,0 +1,1 @@
+{"name":"close_app","description":"\n    Close or terminate a running desktop application by its name or process name (e.g., 'spotify', 'vlc', 'chrome').\n    ","parameters":{"properties":{"process_or_app_name":{"title":"Process Or App Name","type":"string"}},"required":["process_or_app_name"],"title":"close_appArguments","type":"object"}}

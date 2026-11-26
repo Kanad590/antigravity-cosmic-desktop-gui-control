@@ -1,0 +1,1 @@
+{"name":"list_running_windows","description":"\n    List open application windows on the desktop (titles, IDs, and classes).\n    ","parameters":{"properties":{},"title":"list_running_windowsArguments","type":"object"}}

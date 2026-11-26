@@ -1,0 +1,1 @@
+{"name":"get_clipboard","description":"\n    Read current text content from the desktop clipboard (Wayland / X11).\n    ","parameters":{"properties":{},"title":"get_clipboardArguments","type":"object"}}

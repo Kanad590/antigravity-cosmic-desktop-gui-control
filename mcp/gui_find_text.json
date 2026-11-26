@@ -1,0 +1,1 @@
+{"name":"gui_find_text","description":"\n    Locate text visually on screen and return its exact bounding boxes and center coordinates without clicking.\n    ","parameters":{"properties":{"text":{"title":"Text","type":"string"}},"required":["text"],"title":"gui_find_textArguments","type":"object"}}

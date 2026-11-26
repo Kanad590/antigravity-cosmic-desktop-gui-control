@@ -1,0 +1,1 @@
+{"name":"gui_type","description":"\n    Type text into the currently active or focused window using native Wayland virtual keyboard (wtype) / uinput.\n    ","parameters":{"properties":{"text":{"title":"Text","type":"string"}},"required":["text"],"title":"gui_typeArguments","type":"object"}}

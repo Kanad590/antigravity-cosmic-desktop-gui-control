@@ -1,0 +1,1 @@
+{"name":"set_clipboard","description":"\n    Copy text into the desktop clipboard (Wayland / X11).\n    ","parameters":{"properties":{"text":{"title":"Text","type":"string"}},"required":["text"],"title":"set_clipboardArguments","type":"object"}}

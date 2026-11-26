@@ -1,0 +1,1 @@
+{"name":"gui_hotkey","description":"\n    Press keyboard shortcut combinations (e.g. 'ctrl o', 'alt f4', 'ctrl a', 'enter', 'escape').\n    Separate multiple keys with space.\n    ","parameters":{"properties":{"keys":{"title":"Keys","type":"string"}},"required":["keys"],"title":"gui_hotkeyArguments","type":"object"}}

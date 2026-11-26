@@ -1,0 +1,1 @@
+{"name":"list_desktop_apps","description":"\n    List installed desktop applications (Spotify, Telegram, Obsidian, VS Code, VLC, Chrome, GIMP, etc.).\n    Optionally filter by name or keyword.\n    ","parameters":{"properties":{"filter_query":{"default":"","title":"Filter Query","type":"string"}},"title":"list_desktop_appsArguments","type":"object"}}
