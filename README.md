@@ -15,6 +15,13 @@
 
 ---
 
+## 🌐 বাংলা ও हिन्दी পরিচিতি (Bengali & Hindi Overview)
+
+- 🗣️ **বাংলা (Bengali):** **Pop!_OS COSMIC Wayland** ও **Xwayland** ডেস্কটপের জন্য সম্পূর্ণ মানুষের মতো **মাউস ও কিবোর্ড** নিয়ন্ত্রণ ইঞ্জিন। পুরোনো X11 টুল (`PyAutoGUI`, `xdotool`) যেখানে Wayland-এ কাজই করে না, সেখানে এই টুল **Kernel UInput**, **`wtype`**, **AT-SPI**, **Set-of-Mark (`[1] [2]`)**, **OpenCV আইকন ম্যাচিং** এবং **Focus Guard** ব্যবহার করে নিরাপদে যেকোনো অ্যাপ অটোমেট করে। *(বাংলা স্ক্রিন টেক্সট OCR-ও আগে থেকেই সমর্থিত!)*
+- 🇮🇳 **हिन्दी (Hindi):** **Pop!_OS COSMIC Wayland** और **Xwayland** के लिए बनाया गया तेज़ और सुरक्षित **माउस व कीबोर्ड ऑटोमेशन इंजन**। जहाँ पुराने X11 टूल्स (`PyAutoGUI`, `xdotool`) Wayland पर फेल हो जाते हैं, यह इंजन **Kernel UInput**, **`wtype`**, **AT-SPI**, **Set-of-Mark (`[1] [2]`)**, **OpenCV आइकन मैचिंग**, और **Focus Guard** के ज़रिए किसी भी ऐप को इंसान की तरह सटीक तरीके से कंट्रोल करता है।
+
+---
+
 ## ⚡ Why This Exists (X11 Tools vs. COSMIC Wayland Engine)
 
 Traditional Linux automation tools (`xdotool`, `PyAutoGUI`, `scrot`) silently fail on **COSMIC Wayland**. This project replaces brittle hacks with a **kernel-level + compositor-aware stack**:
