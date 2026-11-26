@@ -1,11 +1,44 @@
-# cosmic-desktop-gui-control
+# antigravity-cosmic-desktop-gui-control
 
-Wayland-native + Xwayland Desktop GUI Automation Skill, CLI Engine (`ag-gui` v2.1+), and 35-tool FastMCP Server (`linux-desktop-apps-mcp`) for Pop!_OS COSMIC Wayland.
+**Antigravity Desktop GUI Automation Skill, High-Speed CLI Engine (`ag-gui` v2.1+), and 35-Tool FastMCP Server (`linux-desktop-apps-mcp`)** built specifically for **Pop!_OS COSMIC (Wayland & Xwayland)**.
 
-## Components
+Unlike legacy X11 tools (`xdotool`, `PyAutoGUI`) that break on Wayland, this engine drives native Wayland apps (Firefox, Tuta Mail, COSMIC apps) and Wine/Xwayland apps (such as Jagannatha Hora) reliably at the kernel and compositor level.
 
-- `SKILL.md` — Antigravity skill instructions and safety rules
-- `bin/ag-gui` — Core CLI engine (kernel UInput pointer, `wtype` keyboard, `cosmic-screenshot`, AT-SPI, Set-of-Mark visual tagger, OpenCV multi-scale icon matching, Focus Guard, Popup Detector, batch macro runner)
-- `bin/linux-desktop-apps-mcp` — 35-tool MCP server wrapping `ag-gui`
-- `mcp/` — Tool JSON schemas for all 35 MCP tools
-- `scripts/tuta_mailer.py` — Automated Tuta Mail desktop sender example
+---
+
+## Core Capabilities
+
+- **Kernel UInput Pointer (`EV_ABS` / `EV_REL`):** True Wayland + Xwayland mouse clicks, smooth drag-and-drop, and scroll wheel control without `ydotool` daemon issues.
+- **Wayland-Native Keyboard (`wtype`):** Stdin-safe typing, XKB key-alias normalization, and multi-key hotkeys.
+- **Zero-Clutter Screencapture (`cosmic-screenshot`):** Fast full-desktop and window-cropped screenshots without leaving `/tmp` clutter.
+- **Hybrid UI Discovery (AT-SPI + Dark-Mode OCR):**
+  - Fast AT-SPI accessibility widget lookup (`find_elements`, `click_element`).
+  - Dark-mode-aware Tesseract OCR (`find_text`, `click_text`) with sliding-window phrase matching.
+- **Set-of-Mark (SoM) Visual Tagger (`som_inspect` / `click_mark`):** Merges AT-SPI widgets and OCR labels into numbered `[1]`, `[2]`, ... badges with collision-free placement and yellow exact-center dots.
+- **OpenCV Multi-Scale Icon Matching (`find_icon` / `click_icon`):** Template matching (`TM_CCOEFF_NORMED`) for textless toolbar icons when no keyboard shortcut exists.
+- **Safety & Reliability Guards:**
+  - **Focus Guard (`--guard` / `guard_window`):** Aborts typing, hotkeys, and pointer actions if focus leaves the target window.
+  - **Popup Detector (`--stop-on-popup`):** Halts batch execution immediately when unexpected X11 or Wayland modal dialogs appear.
+  - **Universal Field Replacement (`replace_text`):** Automatically detects Win32/Wine `CEdit` controls (`Home` + `Shift+End` / drag-select) vs modern GTK/Electron (`Ctrl+A`).
+  - **Idempotent Window Maximize (`maximize_window`):** Checks window bounds before toggling `Super+m` on COSMIC or uses `wmctrl` on Xwayland.
+- **Single-Call Batch Macro Runner (`batch` / `gui_batch`):** Executes multi-step GUI sequences in-process with zero LLM round-trip lag.
+
+---
+
+## Repository Structure
+
+| Path | Description |
+| :--- | :--- |
+| `SKILL.md` | Antigravity skill definition, tool routing, and safety rules |
+| `bin/ag-gui` | Main Python CLI automation engine |
+| `bin/linux-desktop-apps-mcp` | 35-tool FastMCP server wrapping `ag-gui` |
+| `mcp/*.json` | JSON tool schemas for all 35 MCP tools |
+| `scripts/tuta_mailer.py` | Example automated email sender for Tuta Mail Flatpak |
+
+---
+
+## Requirements (Pop!_OS COSMIC / Linux Wayland)
+
+- Python 3.12+ (`evdev`, `Pillow`, `numpy`, `opencv-python`, `PyGObject` / `Atspi`)
+- `wtype`, `tesseract-ocr`, `cosmic-screenshot`, `wmctrl`, `xdotool`, `wl-clipboard`
+- `uv` (for running `linux-desktop-apps-mcp` with `mcp<2`)
