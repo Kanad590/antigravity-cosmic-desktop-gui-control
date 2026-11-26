@@ -1,4 +1,4 @@
-# desktop-gui-control
+# cosmic-desktop-gui-control
 
 Wayland-native + Xwayland Desktop GUI Automation Skill, CLI Engine (`ag-gui` v2.1+), and 35-tool FastMCP Server (`linux-desktop-apps-mcp`) for Pop!_OS COSMIC Wayland.
 
